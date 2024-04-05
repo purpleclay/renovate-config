@@ -2,8 +2,8 @@
   "description": "Configures Renovate for all Purple Clay projects",
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>purplclay/renovate-config//base",
-    "local>purplclay/renovate-config//groups",
-    "local>purplclay/renovate-config//labels"
+    "local>purpleclay/renovate-config//base",
+    "local>purpleclay/renovate-config//groups",
+    "local>purpleclay/renovate-config//labels"
   ]
 }
