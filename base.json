@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":disableMajorUpdates",
+    ":ignoreModulesAndTests",
+    ":prConcurrentLimitNone",
+    ":prHourlyLimitNone",
+    ":rebaseStalePrs",
+    ":semanticCommits",
+    "workarounds:all"
+  ],
+  "assigneesFromCodeOwners": true
+}
