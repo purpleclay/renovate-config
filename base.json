@@ -8,7 +8,9 @@
     ":prHourlyLimitNone",
     ":rebaseStalePrs",
     ":semanticCommits",
+    ":semanticCommitTypeAll(fix)",
     "workarounds:all"
   ],
-  "assigneesFromCodeOwners": true
+  "assigneesFromCodeOwners": true,
+  "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"]
 }

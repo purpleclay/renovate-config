@@ -4,6 +4,8 @@
   "extends": [
     "local>purpleclay/renovate-config//base",
     "local>purpleclay/renovate-config//groups",
-    "local>purpleclay/renovate-config//labels"
+    "local>purpleclay/renovate-config//labels",
+    "local>purpleclay/renovate-config//regexmatch",
+    "local>purpleclay/renovate-config//strategy"
   ]
 }
