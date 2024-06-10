@@ -1,9 +1,0 @@
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["^.github/workflows/.+\\.ya?ml$"],
-      "semanticCommitType": "chore"
-    }
-  ]
-}
