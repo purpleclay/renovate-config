@@ -8,6 +8,18 @@
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>.+?)(?: versioning=(?<versioning>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\s(?:ARG|ENV).+_VERSION=?\\s*\"?(?:(?<currentValue>[a-z0-9.-]+))\"?"
       ]
+    },
+    {
+      "customType": "regex",
+      "description": "Update Purple Clay Dagger modules within GitHub workflows",
+      "fileMatch": ["^\\.github\/workflows\/.*\\.ya?ml$"],
+      "depNameTemplate": "purpleclay/daggerverse",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver",
+      "matchStrings": [
+        "module:\\s+github\\.com\/purpleclay\/daggerverse\/(?<prefix>.+)@v(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "extractVersionTemplate": "{{prefix}}/v{{currentValue}}"
     }
   ]
 }
