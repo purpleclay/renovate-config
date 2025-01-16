@@ -11,12 +11,11 @@
     },
     {
       "customType": "regex",
-      "description": "Update Purple Clay Dagger modules within GitHub workflows",
+      "description": "Update GitHub based Dagger modules within Dagger GitHub action",
       "fileMatch": ["^\\.github\/workflows\/.*\\.ya?ml$"],
-      "depNameTemplate": "purpleclay/daggerverse",
       "datasourceTemplate": "github-tags",
       "matchStrings": [
-        "module:\\s+github\\.com\/purpleclay\/daggerverse\/(?<prefix>.+)@v(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+        "module:\\s+github\\.com\/(?<depName>.+)\/(?<prefix>.+)@v(?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
       "currentValueTemplate": "{{prefix}}/v{{currentValue}}",
       "versioningTemplate": "regex:^(?<compatibility>.*)/v?(?<major>\\d+)\\.?(?<minor>\\d+)?\\.?(?<patch>\\d+)?$",
