@@ -1,0 +1,16 @@
+= Renovate Config
+
+Custom configuration for Renovate.
+
+== Enabling Auto-merge
+
+[source,json]
+----
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>purpleclay/renovate-config",
+    "github>purpleclay/renovate-config//automerge"
+  ]
+}
+----
