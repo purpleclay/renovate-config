@@ -12,5 +12,12 @@
     "workarounds:all"
   ],
   "assigneesFromCodeOwners": true,
-  "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"]
+  "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"],
+  "packageRules": [
+    {
+      "description": "Use fix(deps) for cargo package updates",
+      "matchManagers": ["cargo"],
+      "semanticCommitType": "fix"
+    }
+  ]
 }
