@@ -1,4 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["group:monorepos", "group:recommended"]
+  "extends": ["group:monorepos", "group:recommended"],
+  "packageRules": [
+    {
+      "description": "Group purpleclay/x cli and theme modules together",
+      "matchPackageNames": [
+        "github.com/purpleclay/x/cli",
+        "github.com/purpleclay/x/theme"
+      ],
+      "groupName": "purpleclay/x",
+      "commitBodyTable": true
+    }
+  ]
 }
