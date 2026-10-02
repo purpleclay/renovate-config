@@ -23,10 +23,13 @@
     },
     {
       "customType": "regex",
-      "description": "Update _VERSION environment variables in GitHub workflows",
-      "managerFilePatterns": ["/^\\.github\/workflows\/.*\\.ya?ml$/"],
+      "description": "Update _VERSION environment and shell variables in GitHub workflows and composite actions",
+      "managerFilePatterns": [
+        "/^\\.github\/workflows\/.*\\.ya?ml$/",
+        "/^action\\.ya?ml$/"
+      ],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>[\\S]+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s+.+_VERSION:\\s+[\"']?(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)[\"']?"
+        "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>[\\S]+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s+.+_VERSION(?::\\s+|=)[\"']?(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)[\"']?"
       ]
     }
   ]
