@@ -8,7 +8,7 @@ Custom configuration for Renovate.
 - `groups.json` - groups monorepo packages and explicitly linked modules (e.g. purpleclay/x) into single PRs.
 - `labels.json` - applies labels to PRs based on update type (major, minor, patch, digest).
 - `automerge.json` - enables auto-merge for minor and patch updates when all status checks pass.
-- `regexmatch.json` - custom regex managers for versioned variables in Dockerfiles and GitHub workflows.
+- `regexmatch.json` - custom regex managers for versioned variables in Dockerfiles, GitHub workflows and composite GitHub actions.
 
 ## Enabling Auto-merge
 
