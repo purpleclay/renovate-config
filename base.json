@@ -21,6 +21,11 @@
       "semanticCommitType": "fix"
     },
     {
+      "description": "Use fix(deps) for dependencies shipped within a composite GitHub action",
+      "matchFileNames": ["action.yml", "action.yaml"],
+      "semanticCommitType": "fix"
+    },
+    {
       "description": "Describe the full version change in single-dependency commit subjects",
       "matchUpdateTypes": ["major", "minor", "patch"],
       "commitMessageExtra": "{{#if currentVersion}}from {{{currentVersion}}} {{/if}}to {{#if newVersion}}{{{newVersion}}}{{else}}{{{newValue}}}{{/if}}"
