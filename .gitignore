@@ -1,0 +1,17 @@
+# Ignore everything and selectively allow files
+*
+
+!.envrc
+!.github/workflows/*.yml
+!.gitignore
+!/*.json
+!CODEOWNERS
+!flake.lock
+!flake.nix
+!LICENSE
+!README.md
+!RELEASE.md
+!typos.toml
+
+# Recurse through sub-directories applying the same patterns
+!*/

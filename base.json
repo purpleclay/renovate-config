@@ -19,6 +19,11 @@
       "description": "Use fix(deps) for cargo package updates",
       "matchManagers": ["cargo"],
       "semanticCommitType": "fix"
+    },
+    {
+      "description": "Describe the full version change in single-dependency commit subjects",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "commitMessageExtra": "{{#if currentVersion}}from {{{currentVersion}}} {{/if}}to {{#if newVersion}}{{{newVersion}}}{{else}}{{{newValue}}}{{/if}}"
     }
   ]
 }
