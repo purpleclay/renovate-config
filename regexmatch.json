@@ -4,7 +4,7 @@
     {
       "customType": "regex",
       "description": "Update _VERSION variables within a Dockerfile",
-      "fileMatch": ["^Dockerfile$", "^Dockerfile\\.*$"],
+      "managerFilePatterns": ["/^Dockerfile$/", "/^Dockerfile\\.*$/"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>.+?)(?: versioning=(?<versioning>.+?))?(?: registryUrl=(?<registryUrl>.+?))?\\s(?:ARG|ENV).+_VERSION=?\\s*\"?(?:(?<currentValue>[a-z0-9.-]+))\"?"
       ]
@@ -12,7 +12,7 @@
     {
       "customType": "regex",
       "description": "Update GitHub based Dagger modules within Dagger GitHub action",
-      "fileMatch": ["^\\.github\/workflows\/.*\\.ya?ml$"],
+      "managerFilePatterns": ["/^\\.github\/workflows\/.*\\.ya?ml$/"],
       "datasourceTemplate": "github-tags",
       "matchStrings": [
         "module:\\s+github\\.com\/(?<depName>.+)\/(?<prefix>.+)@(?<currentValue>v?\\d+\\.\\d+\\.\\d+)"
@@ -24,7 +24,7 @@
     {
       "customType": "regex",
       "description": "Update _VERSION environment variables in GitHub workflows",
-      "fileMatch": ["^\\.github\/workflows\/.*\\.ya?ml$"],
+      "managerFilePatterns": ["/^\\.github\/workflows\/.*\\.ya?ml$/"],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>[\\S]+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s+.+_VERSION:\\s+[\"']?(?<currentValue>v?[0-9]+\\.[0-9]+\\.[0-9]+)[\"']?"
       ]
