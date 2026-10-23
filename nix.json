@@ -3,7 +3,9 @@
   "nix": {
     "enabled": true,
     "lockFileMaintenance": {
-      "enabled": true
+      "enabled": true,
+      "commitMessageAction": "update",
+      "commitMessageTopic": "nix flake.lock"
     }
   }
 }
